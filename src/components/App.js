@@ -2,12 +2,13 @@
 import React from "react";
 import './../styles/App.css';
 
-const App = () => {
+function App() {
   return (
-    <div>
-        {/* Do not remove the main div */}
+    <div className="App">
+      <h1>NY Times Best Sellers</h1>
+      <BooksList />
     </div>
-  )
+  );
 }
 
 export default App
