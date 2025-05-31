@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { fetchBooks, sortBooks } from './bookActions';
 
-const BooksList = ({ books, loading, error, sortBy, sortOrder, fetchBooks, sortBooks }) => {
+const BookList = ({ books, loading, error, sortBy, sortOrder, fetchBooks, sortBooks }) => {
   useEffect(() => {
     fetchBooks();
   }, [fetchBooks]);
@@ -80,4 +80,4 @@ const mapStateToProps = (state) => ({
   sortOrder: state.books.sortOrder
 });
 
-export default connect(mapStateToProps, { fetchBooks, sortBooks })(BooksList);
+export default connect(mapStateToProps, { fetchBooks, sortBooks })(BookList);
